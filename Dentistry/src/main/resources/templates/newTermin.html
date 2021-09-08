@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../../static/css/flatly/bootstrap.min.css"
+	th:href="@{css/style.css}" />
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../static/css/flatly/bootstrap.min.css"
+	th:href="@{/css/flatly/bootstrap.min.css}" />
+<script th:src="@{webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/bootstrap.min.js}"></script>
+<title>Register</title>
+</head>
+<body>
+	<div th:replace="header::header"></div>
+
+<!-- 	<div layout:fragment="content" class="container myspace"> -->
+<!-- 	<div class="alert alert-info" th:if="${exist}"> -->
+<!-- 	<p class="text text-center"> -->
+<!-- 	Ky perdorues eshte regjistruar me pare! -->
+<!-- 	</p> -->
+<!-- 	</div> -->
+		<div class="jumbotron">
+			<h2>Cakto termin te ri</h2>
+			<br>
+			<form action="#" th:action="@{/saveTermin}"  method="post">
+			
+				<div class="form-group">
+					<label>Emri::</label>
+				 	<input type="text"  class="form-control" id="emri_pacientit" name="emri_pacientit" />
+<!-- 						<div class="text text-danger" th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Id errorr</div> -->
+				</div>
+				
+				<div class="form-group">
+					<label>Data:</label> 
+					<input type="date"  class="form-control" id="data" name="data" />
+<!-- 						<div class="text text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div> -->
+				</div>
+
+				<div class="form-group">
+					<label>Koha:</label>
+					<input type="time"  class="form-control" id="koha" name="koha" />
+<!-- 						<div class="text text-danger" th:if="${#fields.hasErrors('pass')}" th:errors="*{pass}">Pass error</div> -->
+				</div>
+
+				<input type="submit" value="Submit" class="btn-primary">
+			</form>
+		</div>
+	</div>
+
+	<div th:replace="footer::footer"></div>
+</body>
+</html>

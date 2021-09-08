@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../../static/css/flatly/bootstrap.min.css"
+	th:href="@{css/style.css}" />
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../static/css/flatly/bootstrap.min.css"
+	th:href="@{/css/flatly/bootstrap.min.css}" />
+<script th:src="@{webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{webjars/bootstrap/bootstrap.min.js}"></script>
+<title>Login Page</title>
+</head>
+<body>
+	<div th:replace="header::header"></div>
+
+	<div layout:fragment="content" class="container myspace">
+		<div class="jumbotron">
+			<h2>Identifikohuni</h2><br>
+			<form action="/intro" method="post">
+				<p>Perdoruesi: <input type="text" name="user"  class="form-control"></input></p><br>
+				<p>Fjalekalimi: <input type="password" name="pass" class="form-control"></p><br>
+				<button type="submit" class="btn-primary">Register</button>
+			</form>
+		</div>
+	</div>
+
+	<div th:replace="footer::footer"></div>
+</body>
+</html>
